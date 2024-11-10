@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/idojaraselorejelzeswebasztali-gubacsiaronmate/weather_web/"
+  base: "/weather_project_deploy/"
 })
