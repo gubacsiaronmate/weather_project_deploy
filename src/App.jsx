@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './App.css';
 import SearchBar from "./components/SearchBar.jsx";
 import WeatherDetails from "./components/WeatherDetails.jsx";
-import Forecast from "./components/Forecast.jsx";
 import Error from "./components/Error.jsx";
 import CurrentWeather from "./components/CurrentWeather.jsx";  // Import the new component
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,7 +15,7 @@ function App() {
     
     const fetchWeather = async () => {
         try {
-            const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?key=${API_KEY}`);
+            const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${API_KEY}`);
             if (!response.ok) { throw new Error('City not found'); }
             const data = await response.json();
             setWeatherData(data);

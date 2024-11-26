@@ -11,7 +11,7 @@ function SearchBar({ setCity, fetchWeather }) {
     
     return (
         <div className="search-bar d-flex justify-content-center mt-4 mb-4">
-            <div className="input-group w-50">
+            <div className="input-group w-250">
                 <input
                     type="text"
                     className="form-control rounded-left"
